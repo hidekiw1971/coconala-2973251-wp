@@ -1,0 +1,171 @@
+@use "global" as *;
+
+.header {
+    position: fixed;
+    background: rgba(255, 187, 28, 1);
+    display: block;
+    width: 100%;
+    padding: rem(20) rem(20);
+    z-index: 10;
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.header>.header-wrapper>a>h1::before {
+    content: "一般ｘｘｘｘ";
+    display: block;
+    font-size: rem(10);
+    position: absolute;
+    top: rem(20);
+
+    @include mq(md) {
+        top: rem(50);
+    }
+}
+
+.header>.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: rem(10);
+
+    @include mq(md) {
+        max-width: rem(1280);
+        margin: 0 auto;
+    }
+}
+
+// pc時のmenu
+.header>.header-wrapper>.menu {
+    display: none;
+
+    @include mq(md) {
+        display: block;
+    }
+}
+
+.header>.header-wrapper>.menu>.menu-list {
+    display: none;
+
+    @include mq(md) {
+        display: flex;
+        margin-bottom: rem(20);
+    }
+}
+
+.header>.header-wrapper>.menu>.menu-list>li>a {
+    display: none;
+
+    @include mq(md) {
+        display: block;
+        width: 100%;
+        height: 100%;
+        white-space: nowrap;
+    }
+}
+
+.header>.header-wrapper>.menu>.menu-list>li {
+    display: none;
+
+    @include mq(md) {
+        display: inline-block;
+        transition: 0.3s linear;
+        border-radius: rem(5);
+    }
+}
+
+.header>.header-wrapper>.menu>.menu-list>li:not(:last-child) {
+    display: none;
+
+    @include mq(md) {
+        display: block;
+        margin-right: rem(5);
+    }
+}
+
+// hover
+.header>.header-wrapper>.menu>.menu-list>li:hover {
+    display: none;
+
+    @include mq(md) {
+        display: inline-block;
+        background: rgba(255, 255, 255, 1);
+    }
+}
+
+.header>.header-wrapper>.menu>.menu-list>li:nth-last-child(1) {
+    display: none;
+
+    @include mq(md) {
+        display: block;
+        background: rgba(255, 255, 255, 1);
+        transition: 0.3s linear;
+    }
+}
+
+.header>.header-wrapper>.menu>.menu-list>li:nth-last-child(1):hover {
+    display: none;
+
+    @include mq(md) {
+        display: block;
+        background: rgba(51, 51, 51, 1);
+        color: rgba(255, 255, 255, 1);
+    }
+}
+
+.header>.header-wrapper>.menu>.menu-telsns {
+
+    @include mq(md) {
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        gap: rem(10) rem(30);
+        align-items: center;
+        width: fit-content;
+        margin-left: auto;
+
+    }
+}
+
+.header>.header-wrapper>.menu>.menu-telsns>.telno {
+
+    @include mq(md) {
+        font-size: rem(24);
+    }
+}
+
+.header>.header-wrapper>.menu>.menu-list>li {
+
+    @include mq(md) {
+        padding: rem(5) rem(20);
+    }
+}
+
+.header>.header-wrapper>.menu>.menu-telsns>li>a>img {
+
+    @include mq(md) {
+        width: rem(48);
+    }
+}
+
+
+
+// mobile時のメニュー表示
+.header>.menu-telsns-mobile {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    margin-right: auto;
+    width: fit-content;
+    column-gap: rem(20);
+
+    @include mq(md) {
+        display: none;
+    }
+
+}
+
+.header>.menu-telsns-mobile>li>a>img {
+    width: rem(24);
+
+}

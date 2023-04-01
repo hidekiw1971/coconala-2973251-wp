@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.swiper.mySwiper-oshirase {
+    padding-top: rem(15);
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.mySwiper-oshirase:hover {
+    .card:not(:hover) {
+        opacity: 0.7;
+    }
+
+    @include mq(md) {
+        // 
+    }
+}

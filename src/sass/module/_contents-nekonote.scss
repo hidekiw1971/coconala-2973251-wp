@@ -1,0 +1,52 @@
+@use "global" as *;
+
+.contents-nekonote {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: rem(50);
+
+    @include mq(md) {
+        max-width: rem(1280);
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: rem(50);
+        // 
+    }
+}
+
+// .contents-nekonote>a>figure {
+.contents-nekonote>a {
+    width: calc(100%/2);
+    overflow: hidden;
+    position: relative;
+
+    @include mq(md) {
+        width: calc(100%/4);
+    }
+}
+
+.contents-nekonote>a>figure::before {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top: 100%;
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.contents-nekonote>a>figure>img,
+.contents-nekonote>a>figure>p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 0, 0, 1);
+    font-size: rem(32);
+    font-weight: $bold;
+
+    @include mq(md) {
+        // 
+    }
+}

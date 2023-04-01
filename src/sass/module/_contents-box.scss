@@ -1,0 +1,35 @@
+@use "global" as *;
+
+// .contents-box>figure {
+//     display: block;
+//     position: relative;
+//     overflow: hidden;
+//     width: rem(310);
+//     max-width: calc(100/4%);
+
+//     @include mq(md) {
+//         // 
+//     }
+// }
+
+// .contents-box>figure::before {
+//     content: "";
+//     display: block;
+//     width: 100%;
+//     padding-top: 100%;
+
+//     @include mq(md) {
+//         // 
+//     }
+// }
+
+// .contents-box>figure>img,
+// .contents-box>figure>p {
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     color: rgba(255, 0, 0, 1);
+//     font-size: rem(32);
+//     font-weight: $bold;
+// }

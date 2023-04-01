@@ -1,0 +1,178 @@
+@use "global" as *;
+
+// contents-box1 image-left
+.contents-box1 {
+    background: rgba(255, 255, 255, 1);
+    margin-bottom: rem(50);
+
+    @include mq(md) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 10%;
+        direction: ltr;
+        gap: rem(10);
+        justify-content: center;
+        align-items: center;
+        max-width: rem(1280);
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: rem(50);
+    }
+}
+
+.contents-box1>div {
+    display: none;
+
+    @include mq(md) {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: rgba(235, 206, 108, 1);
+    }
+
+}
+
+.contents-box1>h2 {
+    background: rgba(255, 187, 28, 1);
+    padding: rem(10) rem(20);
+    text-align: center;
+
+    @include mq(md) {
+        display: none;
+    }
+}
+
+.contents-box1>ul>li>h3 {
+    text-align: center;
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.contents-box1>ul>li {
+    padding: rem(10) 0;
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.contents-box1>ul {
+    padding: rem(20);
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.contents-box1>ul>li:nth-child(1) {
+    display: none;
+
+    @include mq(md) {
+        display: block;
+    }
+}
+
+.contents-box1>ul>li>h2 {
+    text-align: center;
+
+    @include mq(md) {
+        // 
+    }
+}
+
+
+// table
+// .contents-box1>ul>li>table>tbody {
+// vertical-align: top;
+// }
+
+
+// box-image-right
+.box-image-right {
+    max-width: rem(1280);
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: rem(50);
+
+    @include mq(md) {
+        display: grid;
+        grid-template-columns: 10% 1fr 1fr;
+        align-items: center;
+        background: rgba(255, 255, 255, 1);
+    }
+}
+
+.box-image-right>h2 {
+    background: rgba(255, 187, 28, 1);
+    text-align: center;
+    padding: rem(10) rem(20);
+
+    @include mq(md) {
+        display: none;
+    }
+}
+
+.box-image-right>ul>li {
+    padding: rem(10) 0;
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.box-image-right>ul>li>h2 {
+    display: none;
+
+    @include mq(md) {
+        display: block;
+        text-align: center;
+    }
+}
+
+.box-image-right>ul>li>h3 {
+    text-align: center;
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.box-image-right>ul {
+    background: rgba(255, 255, 255, 1);
+    padding: rem(20);
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.box-image-right>ul>li>h2 {
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.box-image-right>span {
+    @include mq(md) {
+        height: 100%;
+        background: rgba(235, 206, 108, 1);
+    }
+}
+
+// imageの標示設定
+.box-image-right>.up {
+
+    @include mq(md) {
+        display: none;
+    }
+}
+
+.box-image-right>.bottom {
+    display: none;
+
+    @include mq(md) {
+        display: block;
+    }
+}

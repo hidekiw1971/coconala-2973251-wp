@@ -1,0 +1,37 @@
+@use "global" as *;
+
+.contents {
+    margin-bottom: rem(50);
+    background: rgba(235, 206, 108, 1);
+
+    @include mq(md) {
+        text-align: center;
+    }
+}
+
+.contents>h2 {
+    background: rgba(255, 187, 28, 1);
+    font-size: rem(24);
+    font-weight: $bold;
+    line-height: 1.5;
+    letter-spacing: calc(1em/24);
+    text-align: center;
+    padding: rem(20);
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.contents>p {
+    background: rgba(235, 206, 108, 1);
+    font-size: rem(16);
+    font-weight: $regular;
+    line-height: 2;
+    letter-spacing: calc(1em/16);
+    padding: rem(20);
+
+    @include mq(md) {
+        // 
+    }
+}

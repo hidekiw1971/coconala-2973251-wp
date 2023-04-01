@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.footer {
+    background: rgba(255, 187, 28, 1);
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.footer>.footer-wrapper {
+    max-width: rem(1280);
+    width: 100%;
+    padding: rem(20);
+    margin: 0 auto;
+
+    @include mq(md) {
+        // 
+    }
+}
+
+.footer>.footer-wrapper>p>small {
+    display: flex;
+    justify-content: center;
+
+    @include mq(md) {
+        // 
+    }
+}
